@@ -1,0 +1,1 @@
+The build folder is the output of the old vimtex setup. The new, should preferably also output everything into one folder. Maybe there is a way of only exporting pdf and log files, the others a useless to me. 
