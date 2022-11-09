@@ -65,15 +65,18 @@ return packer.startup(function(use)
 	use("L3MON4D3/LuaSnip") -- snippet engine
 	use("saadparwaiz1/cmp_luasnip") -- for autocompletion
 	use("rafamadriz/friendly-snippets") -- useful snippets
-  
-  -- managing & installing lsp servers, linters & formatters
-	use("williamboman/mason.nvim") -- in charge of managing lsp servers, linters & formatters
-	use("williamboman/mason-lspconfig.nvim") -- bridges gap b/w mason & lspconfig
 
-  use("neovim/nvim-lspconfig") -- easily configure language servers
-  use("hrsh7th/cmp-nvim-lsp") -- for autocompletion
-  use({ "glepnir/lspsaga.nvim", branch = "main" }) -- enhanced lsp uis
-  use("onsails/lspkind.nvim") -- vs-code like icons for autocompletion
+  -- managing & installing lsp servers, linters & formatters
+	--use("williamboman/mason.nvim") -- in charge of managing lsp servers, linters & formatters
+	--use("williamboman/mason-lspconfig.nvim") -- bridges gap b/w mason & lspconfig
+
+  --use("neovim/nvim-lspconfig") -- easily configure language servers
+  --se("hrsh7th/cmp-nvim-lsp") -- for autocompletion
+  --use({ "glepnir/lspsaga.nvim", branch = "main" }) -- enhanced lsp uis
+  --use("onsails/lspkind.nvim") -- vs-code like icons for autocompletion
+
+  --Trying Coc.vim instaead of mason for lsp 
+  use({'neoclide/coc.nvim', branch = 'release', run = ':CocUpdate'}) 
 
   -- treesitter configuration
 	use({
@@ -86,6 +89,9 @@ return packer.startup(function(use)
 	-- auto closing
 	use("windwp/nvim-autopairs") -- autoclose parens, brackets, quotes, etc...
 	use({ "windwp/nvim-ts-autotag", after = "nvim-treesitter" }) -- autoclose tags
+
+  -- Latex, VimTex
+  use("lervag/vimtex")
 
   if packer_bootstrap then 
     require("packer").sync()

@@ -62,8 +62,22 @@ lspconfig["julials"].setup({
 	on_attach = on_attach,
 })
 
+-- -- configure latex server
+-- lspconfig["ltex"].setup({
+-- 	capabilities = capabilities,
+-- 	on_attach = on_attach,
+--   default_config = {
+--     filetypes = {'tex', 'bib', 'md'};
+--     settings = {
+--       ltex = {
+--         enabled = {"latex", "tex", "bib", "md"},
+--       },
+--     },
+--   },
+-- })
+
 -- configure latex server
-lspconfig["ltex"].setup({
+lspconfig["texlab"].setup({
 	capabilities = capabilities,
 	on_attach = on_attach,
 })

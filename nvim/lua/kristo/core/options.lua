@@ -1,17 +1,18 @@
 local opt = vim.opt -- for conciseness
 
+
 -- line numbers
-opt.relativenumber = true 
+opt.relativenumber = true
 opt.number = true
 
 -- tabs & indentation
 opt.tabstop = 2
-opt.shiftwidth = 2 
+opt.shiftwidth = 2
 opt.expandtab = true
 opt.autoindent = true
 
 -- line wrapping
-opt.wrap = false 
+opt.wrap = false
 
 -- search settings
 opt.ignorecase = true
@@ -34,5 +35,11 @@ opt.clipboard:append("unnamedplus")
 -- split windows
 opt.splitright = true
 opt.splitbelow = true
+
+-- swap
+opt.swapfile = false
+
+-- python path 
+vim.g.python3_host_prog = 'd:/Python'
 
 opt.iskeyword:append("-")

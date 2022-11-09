@@ -9,6 +9,7 @@ treesitter.setup({
 	-- enable syntax highlighting
 	highlight = {
 		enable = true,
+    disable = {"latex"},
 	},
 	-- enable indentation
 	indent = { enable = true },
@@ -22,8 +23,10 @@ treesitter.setup({
 		"lua",
 		"vim",
 		"dockerfile",
-    "python", 
+    "python",
     "toml",
+    "latex",
+    "julia",
 	},
 	-- auto install above language parsers
 	auto_install = true,

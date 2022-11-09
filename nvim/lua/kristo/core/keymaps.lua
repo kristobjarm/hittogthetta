@@ -6,6 +6,9 @@ local keymap = vim.keymap -- for conciseness
 -- General Keymaps
 ---------------------
 
+-- mapping for the correcting spelling 
+--keymap.set('i', '<C-l>', [[<C-g>u<Esc>[s1z=`]a<c-g>u]])
+
 -- use jk to exit insert mode
 keymap.set("i", "jk", "<ESC>")
 
@@ -15,7 +18,7 @@ keymap.set("n", "<leader>nh", ":nohl<CR>")
 -- delete single character without copying into register
 keymap.set("n", "x", '"_x')
 
--- increment/decrement numbers
+-- increment/decrements numbers
 keymap.set("n", "<leader>+", "<C-a>") -- increment
 keymap.set("n", "<leader>-", "<C-x>") -- decrement
 

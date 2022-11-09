@@ -21,6 +21,7 @@ mason_lspconfig.setup({
     --"dockerls", -- docker
     "julials",  --julia
     "ltex",     --latex language server
+    "texlab",
     --"pyright",  --python 
     "sumneko_lua", --lua
     -- should also be configured in the lspconfig file
